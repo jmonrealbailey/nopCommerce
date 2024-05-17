@@ -1,0 +1,7 @@
+setup:
+  addons:
+    - plan: heroku-postgresql-jimonreal:essential-0
+      as: NOPDB
+build:
+  docker:
+    web: Dockerfile
