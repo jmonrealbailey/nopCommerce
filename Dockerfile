@@ -56,7 +56,7 @@ WORKDIR /app
 
 COPY --from=build /app/published .
 
-ENV ASPNETCORE_URLS=http://+:$PORT
-EXPOSE $PORT
+EXPOSE 80
                             
-ENTRYPOINT "/entrypoint.sh"
+#ENTRYPOINT "/entrypoint.sh"
+CMD ASPNETCORE_URLS=http://+:$PORT /entrypoint.sh
