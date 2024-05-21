@@ -7,6 +7,7 @@ COPY ./src ./
 WORKDIR /src/Presentation/Nop.Web   
 
 # build project   
+RUN dotnet add package Npgsql --version 8.0.3
 RUN dotnet build Nop.Web.csproj -c Release
 
 # build plugins
